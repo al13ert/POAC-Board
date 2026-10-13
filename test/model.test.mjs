@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {weekRange,overlaps,demoData} from '../public/model.js';
+test('Hong Kong Monday boundary is independent of UTC day',()=>{const w=weekRange(new Date('2026-10-11T16:01:00Z'));assert.equal(w.days[0],'2026-10-12');assert.equal(w.start,'2026-10-11T16:00:00.000Z');assert.equal(w.end,'2026-10-18T16:00:00.000Z');});
+test('All-day end is exclusive and overnight events span days',()=>{assert.equal(overlaps({start:'2026-10-12',end:'2026-10-14'},'2026-10-13'),true);assert.equal(overlaps({start:'2026-10-12',end:'2026-10-14'},'2026-10-14'),false);assert.equal(overlaps({start:'2026-10-12T23:30:00+08:00',end:'2026-10-13T00:30:00+08:00'},'2026-10-13'),true);});
+test('Demo contains no invented quotes',()=>{assert.ok(demoData().markets.data.every(q=>q.price===null));});

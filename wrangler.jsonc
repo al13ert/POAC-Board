@@ -1,0 +1,21 @@
+{
+  "name": "pointofac-office-tv",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {"directory": "./public", "binding": "ASSETS", "run_worker_first": true},
+  "vars": {
+    "LIVE_ENABLED": "false",
+    "ACCESS_TEAM_DOMAIN": "",
+    "ACCESS_AUD": "",
+    "GOOGLE_CALENDAR_ID": "",
+    "NOTION_TASKS_DATABASE_ID": "181033f7-dde4-8019-8c20-c784203a8e92",
+    "NOTION_TASK_TITLE_PROPERTY": "Name",
+    "NOTION_TASK_ASSIGNEE_PROPERTY": "Assignee",
+    "NOTION_TASK_DUE_PROPERTY": "Due",
+    "NOTION_TASK_PROJECT_PROPERTY": "Project",
+    "NOTION_ANNOUNCEMENTS_DATABASE_ID": "",
+    "NOTION_MILESTONES_DATABASE_ID": ""
+  }
+}
